@@ -5,3 +5,8 @@ def index(request):
 
 def cadastro_candidato(request):
     return render(request, 'cadastro_candidato.html', {})
+
+
+def principal_candidato(request):
+    return render(request, 'principal_candidato.html', {})
+
