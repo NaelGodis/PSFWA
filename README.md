@@ -9,6 +9,8 @@ Na raiz
  pip install -r requirements.txt
 
 Na src
+ python manage.py makemigrations
+python manage.py migrate
 python manage.py runserver
 
 
