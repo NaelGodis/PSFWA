@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'fa/css/all.min.css' %}">
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <title>Django + Bootstrap</title>
+    <title>Web_Editas</title>
 </head>
 
 {% comment %} navbar {% endcomment %}
@@ -80,7 +80,8 @@
         <div class="row">
             <div class="col-6">
                 <h2>Sign-in</h2>
-                <form>
+                <form method="post" action="{% url 'fazer_login' %}">
+                    {% csrf_token %}
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -93,9 +94,16 @@
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
                     <div class="form-group form-check col-6" >
+                        
                         {% comment %} <input type="checkbox" class="form-check-input" id="exampleCheck1"> {% endcomment %}
                         {% comment %} <label class="form-check-label" for="exampleCheck1">Check me out</label> {% endcomment %}
-                        <p><a href="">Não tenho cadastro</a></p>
+                        
+                        <p><a href="{% url 'cadastro_candidato' %}">Não tenho cadastro</a></p>
+                        {% if error_message %}
+                        <div class="alert alert-danger mt-3" role="alert">
+                        {{ error_message }}
+                        </div>
+                        {% endif %}
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>

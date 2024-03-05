@@ -21,11 +21,18 @@ from django.contrib import admin
 from django.urls import path
 from .views import cadastro_candidato
 from .views import principal_candidato
+from django.urls import path
+from .views import fazer_login
 
 urlpatterns = [
      path('admin/', admin.site.urls),
     path('', index),
-    path('cadastro_candidato/',cadastro_candidato),
-    path("principal_candidato/", principal_candidato), #chamada da view para mostrar o template principal_candidato.html
+    path('', fazer_login, name='fazer_login'),
     #path para o perfil do candidato
+    path('cadastro_candidato/', cadastro_candidato, name='cadastro_candidato'),
 ]
+"""<form method="post" action="{% url 'cadastro1' %}">
+    <!-- Seu formulário aqui -->
+    <input type="submit" value="Continuar" />
+</form>
+"""
