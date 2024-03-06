@@ -21,11 +21,15 @@ from django.contrib import admin
 from django.urls import path
 from .views import cadastro_candidato
 from .views import principal_candidato
+from .views import cadastrar
+from .views import login_usuario
 
 urlpatterns = [
-     path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', index),
     path('cadastro_candidato/',cadastro_candidato),
     path("principal_candidato/", principal_candidato), #chamada da view para mostrar o template principal_candidato.html
     #path para o perfil do candidato
+    path("cadastrar/", cadastrar),
+    path("login_usuario/", login_usuario),
 ]
