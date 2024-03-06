@@ -17,3 +17,9 @@ def cadastrar(request):
 def login_usuario(request):
     return render(request, 'login_usuario.html', {})
 
+def login_admin(request):
+    return render(request, 'login_admin.html', {})
+
+def cadastro_admin(request):
+    return render(request, 'cadastro_admin.html', {})
+
