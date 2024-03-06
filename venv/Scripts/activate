@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\adegi\PSFWA\venv"
+VIRTUAL_ENV="C:\Users\erika\OneDrive\Documentos\sistema_webAcademy\PSFWA\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

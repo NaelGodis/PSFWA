@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fa/css/all.min.css' %}">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <title>Cadastro</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-6">
+            <h2>Cadastro</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidade">Nacionalidade:</label>
+                    <select class="form-control" id="nacionalidade">
+                        <option value="br">Brasileira</option>
+                        <option value="outro">Outra</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone Celular:</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone celular">
+                </div>
+                <div class="form-group">
+                    <label for="pais">País:</label>
+                    <input type="text" class="form-control" id="pais" placeholder="Digite seu país">
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP">
+                </div>
+                <div class="form-group">
+                    <label for="tipo_candidato">Tipo de Candidato:</label>
+                    <select class="form-control" id="tipo_candidato">
+                        <option value="graduacao">Estudante Graduação</option>
+                        <option value="pos_graduacao">Estudante Pós-Graduação</option>
+                        <option value="tecnico">Estudante Técnico</option>
+                        <option value="profissional_graduado">Profissional Graduado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tipo_vaga">Tipo de Vaga:</label>
+                    <select class="form-control" id="tipo_vaga">
+                        <option value="ac">AC - Ampla Concorrência</option>
+                        <option value="beo">BEO - Baixa Renda e outras vulnerabilidades sociais</option>
+                        <option value="mul">MUL - Mulheres</option>
+                        <option value="pcd">PCD - Pessoa com Deficiência</option>
+                        <option value="ppi">PPI - Preto, Pardo, Indígena</option>
+                    </select>
+                </div>
+
+                <!-- Documentos -->
+                <div class="form-group">
+                    <label for="doc_identificacao">Cópia Documento de Identificação com Foto:</label>
+                    <input type="file" class="form-control-file" id="doc_identificacao" required>
+                </div>
+                <div class="form-group">
+                    <label for="doc_cpf">Cópia do CPF:</label>
+                    <input type="file" class="form-control-file" id="doc_cpf">
+                </div>
+                <div class="form-group">
+                    <label for="comprovante_escolaridade">Comprovante de Escolaridade:</label>
+                    <input type="file" class="form-control-file" id="comprovante_escolaridade" required>
+                </div>
+                <div class="form-group">
+                    <label for="historico_escolar">Histórico Escolar:</label>
+                    <input type="file" class="form-control-file" id="historico_escolar" required>
+                </div>
+                <div class="form-group">
+                    <label for="termo_compromisso">Termo de Compromisso - Anexo I:</label>
+                    <input type="file" class="form-control-file" id="termo_compromisso" required>
+                </div>
+                <div class="form-group">
+                    <label for="doc_cotas">Documento Comprobatório sistema de cotas:</label>
+                    <input type="file" class="form-control-file" id="doc_cotas">
+                </div>
+                <div class="form-group">
+                    <label for="quadro_horarios">Quadro de Horários (obrigatório para alunos):</label>
+                    <input type="file" class="form-control-file" id="quadro_horarios">
+                </div>
+                <div class="form-group">
+                    <label for="outros_documentos">Outros Documentos para Análise Curricular:</label>
+                    <input type="file" class="form-control-file" id="outros_documentos">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmar_senha">Confirmar Senha:</label>
+                    <input type="password" class="form-control" id="confirmar_senha" placeholder="Confirme sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

@@ -10,3 +10,10 @@ def cadastro_candidato(request):
 def principal_candidato(request):
     return render(request, 'principal_candidato.html', {})
 
+
+def cadastrar(request):
+    return render(request, 'cadastrar.html', {})
+
+def login_usuario(request):
+    return render(request, 'login_usuario.html', {})
+
