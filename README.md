@@ -5,7 +5,7 @@ Crie o ambiente virtual, ativo e instale as dependências:
 
 Na raiz
  python -m venv venv
- Ativar a venv 1
+ Ativar a venv 
 .\venv\Scripts\activate
  
 
