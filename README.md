@@ -12,9 +12,9 @@ Na raiz
 Na src
 pip install -r requirements.txt
 
-python manage.py makemigrations 2
-python manage.py migrate 3
-python manage.py runserver 4
+python manage.py makemigrations 
+python manage.py migrate 
+python manage.py runserver 
 
 
 Administrador admin senha:123456
