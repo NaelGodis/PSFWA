@@ -23,6 +23,8 @@ from .views import cadastro_candidato
 from .views import principal_candidato
 from .views import cadastrar
 from .views import login_usuario
+from .views import login_admin
+from .views import cadastro_admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,4 +34,6 @@ urlpatterns = [
     #path para o perfil do candidato
     path("cadastrar/", cadastrar),
     path("login_usuario/", login_usuario),
+    path("login_admin/", login_admin),
+    path("cadastro_admin/", cadastro_admin),
 ]
